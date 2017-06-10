@@ -36,14 +36,14 @@ class Kernel extends HttpKernel
             \Jiyuers\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-            \Jiyuers\Support\Middleware\LocaleMiddleware::class,
+            \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
 
         'api' => [
 //            'throttle:60,1',
             'bindings',
-            \Jiyuers\Api\Middleware\ApiAccessMiddleware::class,
-            \Jiyuers\Support\Middleware\LocaleMiddleware::class,
+            \Someline\Api\Middleware\ApiAccessMiddleware::class,
+            \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
     ];
 

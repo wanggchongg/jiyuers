@@ -2,7 +2,7 @@
 
 namespace Jiyuers\Http\Controllers;
 
-use Jiyuers\Base\Http\Controllers\Controller;
+use Someline\Base\Http\Controllers\Controller;
 use Jiyuers\Models\Foundation\User;
 
 abstract class BaseController extends Controller

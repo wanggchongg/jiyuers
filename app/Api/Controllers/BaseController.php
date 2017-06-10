@@ -6,7 +6,7 @@
 
 namespace Jiyuers\Api\Controllers;
 
-use Jiyuers\Base\Api\Controllers\Controller;
+use Someline\Base\Api\Controllers\Controller;
 use Jiyuers\Models\Foundation\User;
 
 abstract class BaseController extends Controller
