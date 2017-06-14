@@ -4,8 +4,8 @@ namespace Jiyuers\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;
-use Jiyuers\Image\Models\Traits\SomelineHasImageablesTrait;
-use Jiyuers\Model\Foundation\User as BaseUser;
+use Someline\Image\Models\Traits\SomelineHasImageablesTrait;
+use Someline\Model\Foundation\User as BaseUser;
 
 class User extends BaseUser
 {
