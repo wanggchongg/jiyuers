@@ -3,6 +3,7 @@
 namespace Jiyuers\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends BaseController
 {
@@ -13,7 +14,7 @@ class HomeController extends BaseController
      */
     public function __construct()
     {
-        $this->middleware('auth');
+        //$this->middleware('auth');
     }
 
     /**
@@ -23,6 +24,9 @@ class HomeController extends BaseController
      */
     public function index()
     {
+	if (!Auth::check()) {
+            return view('welcome');
+        }
         return view('home');
     }
 }
