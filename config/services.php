@@ -30,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => \Jiyuers\Models\Foundation\User::class,
+        'model' => \App\Models\Foundation\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

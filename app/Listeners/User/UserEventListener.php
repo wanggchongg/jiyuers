@@ -4,12 +4,12 @@
  * User: Libern
  */
 
-namespace Jiyuers\Listeners\User;
+namespace App\Listeners\User;
 
 
-use Jiyuers\Events\User\UserLoggedInEvent;
-use Jiyuers\Events\User\UserRegisteredEvent;
-use Jiyuers\Models\BaseModel;
+use App\Events\User\UserLoggedInEvent;
+use App\Events\User\UserRegisteredEvent;
+use App\Models\BaseModel;
 
 class UserEventListener
 {
@@ -51,17 +51,17 @@ class UserEventListener
     {
         $events->listen(
             UserLoggedInEvent::class,
-            'Jiyuers\Listeners\User\UserEventListener@onUserLogin'
+            'App\Listeners\User\UserEventListener@onUserLogin'
         );
 
         $events->listen(
             UserRegisteredEvent::class,
-            'Jiyuers\Listeners\User\UserEventListener@onUserRegistered'
+            'App\Listeners\User\UserEventListener@onUserRegistered'
         );
 
 //        $events->listen(
-//            'Jiyuers\Events\UserLoggedOut',
-//            'Jiyuers\Listeners\UserEventListener@onUserLogout'
+//            'App\Events\UserLoggedOut',
+//            'App\Listeners\UserEventListener@onUserLogout'
 //        );
     }
 

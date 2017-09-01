@@ -3,7 +3,7 @@
 if (!function_exists('auth_user')) {
 
     /**
-     * @return \Jiyuers\Model\Foundation\User|\Jiyuers\Models\Foundation\User
+     * @return \App\Model\Foundation\User|\App\Models\Foundation\User
      */
     function auth_user()
     {
@@ -33,11 +33,11 @@ if (!function_exists('rest_client')) {
     /**
      * @param null $service_name
      * @param null $debug_mode
-     * @return \Jiyuers\Rest\RestClient
+     * @return \App\Rest\RestClient
      */
     function rest_client($service_name = null, $debug_mode = null)
     {
-        return new \Jiyuers\Rest\RestClient($service_name, $debug_mode);
+        return new \App\Rest\RestClient($service_name, $debug_mode);
     }
 
 }

@@ -1,10 +1,10 @@
 <?php
 
-namespace Jiyuers\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Jiyuers\Repositories\Eloquent\UserRepositoryEloquent;
-use Jiyuers\Repositories\Interfaces\UserRepository;
+use App\Repositories\Eloquent\UserRepositoryEloquent;
+use App\Repositories\Interfaces\UserRepository;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

@@ -4,9 +4,9 @@
  * User: Libern
  */
 
-namespace Jiyuers\Repositories\Interfaces;
+namespace App\Repositories\Interfaces;
 
-use Jiyuers\Base\Repositories\Interfaces\RepositoryInterface;
+use App\Base\Repositories\Interfaces\RepositoryInterface;
 
 interface BaseRepositoryInterface extends RepositoryInterface
 {

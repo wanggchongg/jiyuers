@@ -4,10 +4,10 @@
  * User: Libern
  */
 
-namespace Jiyuers\Models;
+namespace App\Models;
 
-use Jiyuers\Base\Models\BaseModel as Model;
-use Jiyuers\Models\Foundation\User;
+use App\Base\Models\BaseModel as Model;
+use App\Models\Foundation\User;
 
 class BaseModel extends Model
 {

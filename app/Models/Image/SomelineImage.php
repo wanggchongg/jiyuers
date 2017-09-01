@@ -1,7 +1,7 @@
-<?php namespace Jiyuers\Models\Image;
+<?php namespace App\Models\Image;
 
 
-use Jiyuers\Image\Models\SomelineImageBase;
+use App\Image\Models\SomelineImageBase;
 
 class SomelineImage extends SomelineImageBase
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Jiyuers\Http\Controllers\Mobile;
+namespace App\Http\Controllers\Mobile;
 
-use Jiyuers\Http\Controllers\BaseController;
+use App\Http\Controllers\BaseController;
 
 class MobileController extends BaseController
 {

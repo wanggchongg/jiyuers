@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiyuers\Providers;
+namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 

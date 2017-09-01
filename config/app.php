@@ -12,7 +12,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => 'Jiyuers',
+    'name' => 'App',
 
     /*
     |--------------------------------------------------------------------------
@@ -185,14 +185,14 @@ return [
         /*
          * Application Service Providers...
          */
-        Jiyuers\Providers\AppServiceProvider::class,
-        Jiyuers\Providers\AuthServiceProvider::class,
-        // Jiyuers\Providers\BroadcastServiceProvider::class,
-        Jiyuers\Providers\EventServiceProvider::class,
-        Jiyuers\Providers\RouteServiceProvider::class,
-        Jiyuers\Providers\ApiServiceProvider::class,
-        Jiyuers\Providers\RepositoryServiceProvider::class,
-        Jiyuers\Providers\PolymorphicServiceProvider::class,
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+        App\Providers\ApiServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+        App\Providers\PolymorphicServiceProvider::class,
 
     ],
 

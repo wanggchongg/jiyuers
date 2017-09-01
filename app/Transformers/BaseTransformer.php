@@ -4,11 +4,11 @@
  * User: Libern
  */
 
-namespace Jiyuers\Transformers;
+namespace App\Transformers;
 
 
-use Jiyuers\Base\Models\BaseModel;
-use Jiyuers\Base\Transformers\Transformer;
+use App\Base\Models\BaseModel;
+use App\Base\Transformers\Transformer;
 
 class BaseTransformer extends Transformer
 {

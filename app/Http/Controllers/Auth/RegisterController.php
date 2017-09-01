@@ -1,10 +1,10 @@
 <?php
 
-namespace Jiyuers\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 use Validator;
-use Jiyuers\Http\Controllers\BaseController;
+use App\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
 class RegisterController extends BaseController

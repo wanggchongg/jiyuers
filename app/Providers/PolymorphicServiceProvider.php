@@ -1,10 +1,10 @@
 <?php
 
-namespace Jiyuers\Providers;
+namespace App\Providers;
 
 use Illuminate\Database\Eloquent\Relations\Relation;
 use Illuminate\Support\ServiceProvider;
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 class PolymorphicServiceProvider extends ServiceProvider
 {

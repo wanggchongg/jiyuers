@@ -1,11 +1,11 @@
-<?php namespace Jiyuers\Http\Controllers;
+<?php namespace App\Http\Controllers;
 
 use Exception;
 use Illuminate\Http\Request;
-use Jiyuers\Http\Controllers\BaseController;
-use Jiyuers\Image\Controllers\SomelineImageController;
-use Jiyuers\Image\SomelineImageService;
-use Jiyuers\Models\Image\SomelineImage;
+use App\Http\Controllers\BaseController;
+use App\Image\Controllers\SomelineImageController;
+use App\Image\SomelineImageService;
+use App\Models\Image\SomelineImage;
 
 class ImageController extends BaseController
 {

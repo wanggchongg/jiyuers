@@ -1,16 +1,16 @@
 <?php
 
-namespace Jiyuers\Repositories\Eloquent;
+namespace App\Repositories\Eloquent;
 
-use Jiyuers\Models\Foundation\User;
-use Jiyuers\Presenters\UserPresenter;
-use Jiyuers\Repositories\Criteria\RequestCriteria;
-use Jiyuers\Repositories\Interfaces\UserRepository;
-use Jiyuers\Validators\UserValidator;
+use App\Models\Foundation\User;
+use App\Presenters\UserPresenter;
+use App\Repositories\Criteria\RequestCriteria;
+use App\Repositories\Interfaces\UserRepository;
+use App\Validators\UserValidator;
 
 /**
  * Class UserRepositoryEloquent
- * @package namespace Jiyuers\Repositories\Eloquent;
+ * @package namespace App\Repositories\Eloquent;
  */
 class UserRepositoryEloquent extends BaseRepository implements UserRepository
 {

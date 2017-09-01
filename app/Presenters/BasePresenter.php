@@ -4,10 +4,10 @@
  * User: Libern
  */
 
-namespace Jiyuers\Presenters;
+namespace App\Presenters;
 
 
-use Jiyuers\Base\Presenters\Presenter;
+use App\Base\Presenters\Presenter;
 
 abstract class BasePresenter extends Presenter
 {

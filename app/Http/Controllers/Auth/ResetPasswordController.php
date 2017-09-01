@@ -1,9 +1,9 @@
 <?php
 
-namespace Jiyuers\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
 use Illuminate\Http\Request;
-use Jiyuers\Http\Controllers\BaseController;
+use App\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends BaseController

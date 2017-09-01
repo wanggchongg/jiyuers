@@ -1,12 +1,12 @@
 <?php
 
-namespace Jiyuers\Repositories\Interfaces;
+namespace App\Repositories\Interfaces;
 
-use Jiyuers\Repositories\Interfaces\BaseRepositoryInterface;
+use App\Repositories\Interfaces\BaseRepositoryInterface;
 
 /**
  * Interface UserRepository
- * @package namespace Jiyuers\Repositories\Interfaces;
+ * @package namespace App\Repositories\Interfaces;
  */
 interface UserRepository extends BaseRepositoryInterface
 {

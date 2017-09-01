@@ -1,12 +1,12 @@
 <?php
 
-namespace Jiyuers\Transformers;
+namespace App\Transformers;
 
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 /**
  * Class UserTransformer
- * @package namespace Jiyuers\Transformers;
+ * @package namespace App\Transformers;
  */
 class UserTransformer extends BaseTransformer
 {

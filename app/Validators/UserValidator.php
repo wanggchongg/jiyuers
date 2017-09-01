@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiyuers\Validators;
+namespace App\Validators;
 
 use \Prettus\Validator\Contracts\ValidatorInterface;
 use \Prettus\Validator\LaravelValidator;

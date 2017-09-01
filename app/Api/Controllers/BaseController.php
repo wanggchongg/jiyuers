@@ -4,10 +4,10 @@
  * User: Libern
  */
 
-namespace Jiyuers\Api\Controllers;
+namespace App\Api\Controllers;
 
 use Someline\Base\Api\Controllers\Controller;
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 abstract class BaseController extends Controller
 {

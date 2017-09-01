@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiyuers\Http\Controllers;
+namespace App\Http\Controllers;
 
 
 class ExampleController extends BaseController

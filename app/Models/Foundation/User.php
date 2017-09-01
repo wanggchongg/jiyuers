@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiyuers\Models\Foundation;
+namespace App\Models\Foundation;
 
 use Illuminate\Notifications\Notifiable;
 use Laravel\Passport\HasApiTokens;

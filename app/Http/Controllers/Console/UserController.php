@@ -1,8 +1,8 @@
 <?php
 
-namespace Jiyuers\Http\Controllers\Console;
+namespace App\Http\Controllers\Console;
 
-use Jiyuers\Http\Controllers\BaseController;
+use App\Http\Controllers\BaseController;
 
 class UserController extends BaseController
 {

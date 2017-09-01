@@ -1,15 +1,15 @@
 <?php
 
-namespace Jiyuers\Api\Controllers;
+namespace App\Api\Controllers;
 
 use Dingo\Api\Exception\DeleteResourceFailedException;
 use Dingo\Api\Exception\StoreResourceFailedException;
 use Dingo\Api\Exception\UpdateResourceFailedException;
 use Prettus\Validator\Contracts\ValidatorInterface;
-use Jiyuers\Http\Requests\UserCreateRequest;
-use Jiyuers\Http\Requests\UserUpdateRequest;
-use Jiyuers\Repositories\Interfaces\UserRepository;
-use Jiyuers\Validators\UserValidator;
+use App\Http\Requests\UserCreateRequest;
+use App\Http\Requests\UserUpdateRequest;
+use App\Repositories\Interfaces\UserRepository;
+use App\Validators\UserValidator;
 
 class UsersController extends BaseController
 {

@@ -1,6 +1,6 @@
-<?php namespace Jiyuers\Models\Traits;
+<?php namespace App\Models\Traits;
 
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 trait RelationUserTrait
 {

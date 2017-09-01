@@ -1,8 +1,8 @@
 <?php
 
-namespace Jiyuers\Http\Controllers\Auth;
+namespace App\Http\Controllers\Auth;
 
-use Jiyuers\Http\Controllers\BaseController;
+use App\Http\Controllers\BaseController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends BaseController

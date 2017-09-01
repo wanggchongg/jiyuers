@@ -1,8 +1,8 @@
 <?php
 
-namespace Jiyuers\Policies;
+namespace App\Policies;
 
-use Jiyuers\Base\Policies\Policy;
+use App\Base\Policies\Policy;
 
 class BasePolicy extends Policy
 {

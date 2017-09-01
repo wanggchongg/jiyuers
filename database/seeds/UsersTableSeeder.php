@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 class UsersTableSeeder extends Seeder
 {

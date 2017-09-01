@@ -23,7 +23,7 @@
             "app/Helpers/Helpers.php"
         ],
         "psr-4": {
-            "Jiyuers\\": "app/"
+            "App\\": "app/"
         }
     },
     "autoload-dev": {

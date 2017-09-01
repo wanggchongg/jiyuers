@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => \Jiyuers\Models\Foundation\User::class,
+            'model' => \App\Models\Foundation\User::class,
         ],
 
         // 'users' => [

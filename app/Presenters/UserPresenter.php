@@ -1,13 +1,13 @@
 <?php
 
-namespace Jiyuers\Presenters;
+namespace App\Presenters;
 
-use Jiyuers\Transformers\UserTransformer;
+use App\Transformers\UserTransformer;
 
 /**
  * Class UserPresenter
  *
- * @package namespace Jiyuers\Presenters;
+ * @package namespace App\Presenters;
  */
 class UserPresenter extends BasePresenter
 {

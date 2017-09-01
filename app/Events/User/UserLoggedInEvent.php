@@ -4,11 +4,11 @@
  * User: Libern
  */
 
-namespace Jiyuers\Events\User;
+namespace App\Events\User;
 
 
 use Illuminate\Queue\SerializesModels;
-use Jiyuers\Models\Foundation\User;
+use App\Models\Foundation\User;
 
 class UserLoggedInEvent
 {

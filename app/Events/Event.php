@@ -1,6 +1,6 @@
 <?php
 
-namespace Jiyuers\Events;
+namespace App\Events;
 
 use Someline\Base\Events\Event as BaseEvent;
 
