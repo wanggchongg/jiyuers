@@ -23,7 +23,7 @@ $api->version('v1', [
     $api->group(['middleware' => ['auth:api']], function (Router $api) {
 
         // Rate: 100 requests per 5 minutes
-        $api->group(['middleware' => ['api.throttle'], 'limit' => 100, 'expires' => 5], function (Router $api) {
+        $api->group(['middleware' => ['api.throttle'], 'limit' => 1000, 'expires' => 1], function (Router $api) {
 
             // /users
             $api->group(['prefix' => 'users'], function (Router $api) {
