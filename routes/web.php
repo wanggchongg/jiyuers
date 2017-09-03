@@ -26,7 +26,7 @@ Route::get('welcome', function(){
 Route::get('home', 'HomeController@index');
 
 // 注册路由正则表达式 
-Route::pattern('redirect', '^((?!(api|admin|welcome|login|logout|home)).)*$');
+Route::pattern('redirect', '^((?!(api|admin|welcome|login|logout|home|docs)).)*$');
 
 // Protected Routes
 Route::group(['middleware' => 'auth'], function () {

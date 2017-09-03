@@ -1,0 +1,221 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "CMS API",
+    "version": "1.0",
+    "description": "",
+    "x-stoplight": {
+      "id": "omg-cms/specs/cms"
+    }
+  },
+  "paths": {
+    "/bakpool/catalogTree/news": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        }
+      }
+    },
+    "/article/ignore/{Farticle_id}": {
+      "post": {
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "type": "object",
+              "properties": {}
+            }
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "name": "Farticle_id",
+            "type": "string",
+            "description": "文章id",
+            "required": true
+          }
+        ],
+        "description": "忽略文章池中的文章，使其置灰",
+        "tags": [
+          "文章"
+        ],
+        "produces": [
+          "application/json"
+        ]
+      },
+      "parameters": [
+        {
+          "name": "Farticle_id",
+          "in": "path",
+          "type": "string",
+          "required": true
+        }
+      ]
+    },
+    "/recpool/subpool/order": {
+      "get": {
+        "responses": {
+          "200": {
+            "$ref": "#/responses/common-response"
+          },
+          "204": {
+            "$ref": "#/responses/common-response"
+          }
+        },
+        "tags": [
+          "推荐池"
+        ],
+        "description": "推荐池-手工排序池文章列表",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": []
+      }
+    }
+  },
+  "securityDefinitions": {},
+  "host": "pools.cms.webdev.com",
+  "basePath": "/api",
+  "schemes": [
+    "http"
+  ],
+  "tags": [
+    {
+      "name": "文章"
+    },
+    {
+      "name": "推荐池"
+    },
+    {
+      "name": "编辑池"
+    },
+    {
+      "name": "备选池"
+    }
+  ],
+  "definitions": {
+    "Article": {
+      "type": "object",
+      "title": "文章",
+      "description": "文章Model",
+      "properties": {
+        "Farticle_id": {
+          "type": "string",
+          "description": "文章id"
+        },
+        "Forg_id": {
+          "type": "string",
+          "description": "原始id"
+        },
+        "evaluation": {
+          "$ref": "#/definitions/Evaluation"
+        },
+        "Forigin": {
+          "type": "object",
+          "required": [
+            "Forg_id",
+            "Forg_site",
+            "Forg_column",
+            "Forg_url",
+            "Forg_time"
+          ],
+          "properties": {
+            "Forg_id": {
+              "type": "string",
+              "description": "原始文章id"
+            },
+            "Forg_site": {
+              "type": "string",
+              "description": "文章源站点"
+            },
+            "Forg_column": {
+              "type": "string"
+            },
+            "Forg_url": {
+              "type": "string",
+              "description": "原始url"
+            },
+            "Forg_time": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "required": [
+        "Farticle_id",
+        "Forg_id",
+        "evaluation",
+        "Forigin"
+      ]
+    },
+    "Evaluation": {
+      "type": "object",
+      "title": "评分",
+      "properties": {
+        "level": {
+          "type": "object",
+          "properties": {
+            "status": {
+              "type": "integer"
+            },
+            "final_value": {
+              "type": [
+                "null",
+                "number"
+              ]
+            },
+            "value": {
+              "type": "object",
+              "properties": {
+                "sys": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        },
+        "toneScore": {
+          "type": "string"
+        },
+        "tags": {
+          "type": "string"
+        }
+      },
+      "description": "评分"
+    }
+  },
+  "responses": {
+    "common-response": {
+      "schema": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "type": "integer",
+            "enum": [
+              200,
+              400,
+              500
+            ],
+            "description": "业务状态码"
+          },
+          "msg": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "code",
+          "msg"
+        ]
+      },
+      "description": "通用返回结构"
+    }
+  }
+}
