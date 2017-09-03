@@ -17,7 +17,7 @@
     "laravel/framework": "5.4.*",
     "league/pipeline": "^0.3.0",
     "prettus/l5-repository": "~2.6",
-    "tcg/voyager": "^0.11.9",
+    "tcg/voyager": "^0.11.9"
   },
   "require-dev": {
     "codeception/codeception": "^2.3",
