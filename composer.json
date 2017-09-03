@@ -18,8 +18,6 @@
     "league/pipeline": "^0.3.0",
     "prettus/l5-repository": "~2.6",
     "tcg/voyager": "^0.11.9",
-    "tcms/apirpc": "^2.3",
-    "tcms/pass2auth": "^1."
   },
   "require-dev": {
     "codeception/codeception": "^2.3",
@@ -47,8 +45,8 @@
   },
   "repositories": {
     "jenssegers/mongodb": {
-      "type" : "git",
-      "url" : "https://github.com/Tucker-Eric/laravel-mongodb.git"
+      "type": "git",
+      "url": "https://github.com/Tucker-Eric/laravel-mongodb.git"
     }
   },
   "scripts": {
