@@ -44,6 +44,10 @@
     }
   },
   "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    },
     "jenssegers/mongodb": {
       "type": "git",
       "url": "https://github.com/Tucker-Eric/laravel-mongodb.git"
