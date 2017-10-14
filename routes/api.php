@@ -16,7 +16,7 @@ use Dingo\Api\Routing\Router;
 
 // v1
 $api->version('v1', [
-    'namespace' => 'Someline\Api\Controllers',
+    'namespace' => 'App\Api\Controllers',
     'middleware' => ['api']
 ], function (Router $api) {
 
