@@ -2,7 +2,7 @@
 <project version="4">
   <component name="PhpIncludePathManager">
     <include_path>
-      <path value="D:\hobbywang\tcms\vendor" />
+      <path value="D:\hobbywang\vendor\vendor_pools" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.1" />
