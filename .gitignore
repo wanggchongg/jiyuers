@@ -6,7 +6,7 @@
 Homestead.json
 Homestead.yaml
 .env
-.idea/*
+.idea/*.xml
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/dataSources/
