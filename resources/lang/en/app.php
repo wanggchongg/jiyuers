@@ -16,7 +16,7 @@ return [
     'Welcome'   => 'Welcome',
 
     'user' => [
-        'users' => 'Users',
+        'users' => 'User',
         'login' => 'Sign In',
     ],
 

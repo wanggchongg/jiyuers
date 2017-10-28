@@ -27,12 +27,12 @@ $api->version('v1', [
 
             // /users
             $api->group(['prefix' => 'users'], function (Router $api) {
-                $api->get('/', 'UsersController@index');
-                $api->post('/', 'UsersController@store');
-                $api->get('/me', 'UsersController@me');
-                $api->get('/{id}', 'UsersController@show');
-                $api->put('/{id}', 'UsersController@update');
-                $api->delete('/{id}', 'UsersController@destroy');
+                $api->get('/', 'UsersSLController@index');
+                $api->post('/', 'UsersSLController@store');
+                $api->get('/me', 'UsersSLController@me');
+                $api->get('/{id}', 'UsersSLController@show');
+                $api->put('/{id}', 'UsersSLController@update');
+                $api->delete('/{id}', 'UsersSLController@destroy');
             });
 
         });
