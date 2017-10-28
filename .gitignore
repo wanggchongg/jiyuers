@@ -6,7 +6,6 @@
 Homestead.json
 Homestead.yaml
 .env
-.idea/*.xml
 .idea/workspace.xml
 .idea/tasks.xml
 .idea/dataSources/
@@ -19,7 +18,8 @@ Homestead.yaml
 .idea/gradle.xml
 .idea/libraries
 .idea/mongoSettings.xml
-/.idea/vcs.xml
+.idea/deployment.xml
+.idea/vcs.xml
 *.iws
 /out/
 .idea_modules/

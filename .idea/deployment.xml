@@ -5,7 +5,7 @@
       <paths name="jiyuers">
         <serverdata>
           <mappings>
-            <mapping deploy="jiyuers" local="$PROJECT_DIR$" web="/" />
+            <mapping deploy="/jiyuers_dev" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
