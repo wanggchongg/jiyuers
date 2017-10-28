@@ -1,19 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Someline\Base\Http\Controllers\Controller;
-use App\Models\Foundation\User;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
+use Illuminate\Foundation\Bus\DispatchesJobs;
+use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller;
 
 abstract class BaseController extends Controller
 {
-
-    /**
-     * @return User
-     */
-    public function getAuthUser()
-    {
-        return auth_user();
-    }
-
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

@@ -18,7 +18,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \Clockwork\Support\Laravel\ClockworkMiddleware::class,
+        //\Clockwork\Support\Laravel\ClockworkMiddleware::class,
     ];
 
     /**
@@ -35,15 +35,12 @@ class Kernel extends HttpKernel
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
-            \Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
-            \Someline\Support\Middleware\LocaleMiddleware::class,
+            //\Laravel\Passport\Http\Middleware\CreateFreshApiToken::class,
         ],
 
         'api' => [
 //            'throttle:60,1',
             'bindings',
-            \Someline\Api\Middleware\ApiAccessMiddleware::class,
-            \Someline\Support\Middleware\LocaleMiddleware::class,
         ],
     ];
 
@@ -63,7 +60,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
 
         // Passport
-        'scopes' => \Laravel\Passport\Http\Middleware\CheckScopes::class,
-        'scope' => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
+        //'scopes' => \Laravel\Passport\Http\Middleware\CheckScopes::class,
+        //'scope' => \Laravel\Passport\Http\Middleware\CheckForAnyScope::class,
     ];
 }

@@ -13,11 +13,12 @@
     "dingo/api": "1.0.*@dev",
     "elasticsearch/elasticsearch": "^2.",
     "flow/jsonpath": "^0.3.4",
-    "jenssegers/mongodb": "dev-master",
     "laravel/framework": "5.4.*",
+    "laravel/passport": "dev-master",
     "league/pipeline": "^0.3.0",
     "prettus/l5-repository": "~2.6",
-    "tcg/voyager": "^0.11.9"
+    "predis/predis": "^1.1",
+    "intervention/image": "~2."
   },
   "require-dev": {
     "codeception/codeception": "^2.3",
@@ -47,10 +48,6 @@
     "packagist": {
       "type": "composer",
       "url": "https://packagist.phpcomposer.com"
-    },
-    "jenssegers/mongodb": {
-      "type": "git",
-      "url": "https://github.com/Tucker-Eric/laravel-mongodb.git"
     }
   },
   "scripts": {
