@@ -6,35 +6,19 @@
 
 namespace App\Models;
 
-use App\Base\Models\BaseModel as Model;
-use App\Models\Foundation\User;
+use Illuminate\Database\Eloquent\Model;
+use Prettus\Repository\Presenter\ModelFractalPresenter;
 
 class BaseModel extends Model
 {
-
     /**
-     * @return User|null
+     * Set Model Presenter
+     * @return $this
      */
-    public function getUser()
+    public function setModelPresenter()
     {
-        return parent::getUser();
+        $this->setPresenter(new ModelFractalPresenter());
+        return $this;
     }
-
-    /**
-     * @return User|null
-     */
-    public function getAuthUser()
-    {
-        return parent::getAuthUser();
-    }
-
-    /**
-     * @return User|null
-     */
-    public function getRelatedUser()
-    {
-        return $this->related_user;
-    }
-
 
 }
