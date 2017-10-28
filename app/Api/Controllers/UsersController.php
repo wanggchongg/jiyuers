@@ -11,17 +11,49 @@ namespace App\Api\Controllers;
 use App\Api\Controllers\BaseController;
 use App\Http\Requests\User\EditDetailRequest;
 use App\Http\Requests\User\RegisterByPhoneRequest;
+use App\Http\Requests\User\SendVerificationCodeRequest;
+use App\Services\User\UserService;
 
 class UsersController extends BaseController
 {
+    protected $userService;
+
+    public function __construct(UserService $userService)
+    {
+        $this->userService = $userService;
+    }
+
+
+    public function sendVerificationCode(SendVerificationCodeRequest $request)
+    {
+        $phoneNumber = $request->getPhoneNumber();
+
+        try {
+            $data = $this->userService->sendVerificationCode($phoneNumber);
+        } catch (\Exception $e) {
+            return renderError($e->getCode(),$e->getMessage());
+        }
+        return renderData($data);
+    }
+
     /**
      * 注册（手机注册）
+     * @param RegisterByPhoneRequest $request
+     * @return \Illuminate\Http\JsonResponse
      */
-
-
-    public function registerByPhone(RegisterByPhoneRequest $requst)
+    public function registerByPhone(RegisterByPhoneRequest $request)
     {
+        $phoneNumber = $request->getPhoneNumber();
+        $vCode       = $request->getVCode();
+        $password    = $request->getPassword();
 
+        try {
+            $data = $this->userService->registerByPhone($phoneNumber, $vCode, $password);
+        } catch (\Exception $e) {
+            return renderError($e->getCode(), $e->getMessage());
+        }
+
+        return renderData($data);
     }
 
     /**

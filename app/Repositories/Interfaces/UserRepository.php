@@ -10,9 +10,4 @@ use App\Repositories\Interfaces\BaseRepositoryInterface;
  */
 interface UserRepository extends BaseRepositoryInterface
 {
-    /**
-     * @param array|Collection $userIds
-     * @return $this
-     */
-    public function byUserIds($userIds);
 }

@@ -10,21 +10,11 @@ namespace App\Http\Requests\User;
 
 use App\Http\Requests\BaseRequest;
 
-class RegisterByPhoneRequest extends BaseRequest
+class SendVerificationCodeRequest extends BaseRequest
 {
     public function getPhoneNumber()
     {
         return $this->get('phoneNumber');
-    }
-
-    public function getVCode()
-    {
-        return $this->get('vCode');
-    }
-
-    public function getPassword()
-    {
-        return $this->get('password');
     }
 
     public function authorize()
@@ -36,8 +26,6 @@ class RegisterByPhoneRequest extends BaseRequest
     {
         return [
             'phoneNumber' => 'require|string',
-            'vCode' => 'require|string',
-            'password' => 'require|string',
         ];
     }
 }

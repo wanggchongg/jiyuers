@@ -201,7 +201,7 @@ if (!function_exists('renderError')) {
      * @param string $message
      * @return \Illuminate\Http\JsonResponse
      */
-    function renderError($code = -1, $message = 'error')
+    function renderError($code = -1, $message = null)
     {
         return renderJson(intval($code), $message, null);
     }
@@ -216,7 +216,7 @@ if (!function_exists('renderJson')) {
      * @param null $meta
      * @return \Illuminate\Http\JsonResponse
      */
-    function renderJson($code = 0, $message = 'success', $data = null, $meta = null)
+    function renderJson($code = 0, $message = null, $data = null, $meta = null)
     {
         $code = intval($code);
         $result = [
@@ -244,18 +244,12 @@ if (!function_exists('generateJudgment')) {
      * @param int $code
      * @param string $message
      * @param null $data
-     * @return array
+     * @return \App\Models\Judgement
      */
     function generateJudgment($code = 0, $message = 'success', $data = null)
     {
         $code = intval($code);
-        $result = [
-            'code'    => $code,
-            'message' => $message,
-        ];
-        if ($data !== null) {
-            $result['data'] = $data;
-        }
-        return $result;
+        $message = empty($message) ? config('errors.'.$code) : $message;
+        return new \App\Models\Judgement($code, $message, $data);
     }
 }
