@@ -1,16 +1,14 @@
 <?php
 
-namespace Someline\Repositories\Eloquent;
+namespace App\Repositories\Eloquent;
 
-use Prettus\Repository\Eloquent\BaseRepository;
-use Prettus\Repository\Criteria\RequestCriteria;
-use Someline\Repositories\Interfaces\UserExtendRepository;
-use Someline\Models\UserExtend;
-use Someline\Validators\UserExtendValidator;
+use App\Repositories\Interfaces\UserExtendRepository;
+use App\Models\User\UserExtend;
+use App\Validators\UserExtendValidator;
 
 /**
  * Class UserExtendRepositoryEloquent
- * @package namespace Someline\Repositories\Eloquent;
+ * @package namespace \App\Repositories\Eloquent;
  */
 class UserExtendRepositoryEloquent extends BaseRepository implements UserExtendRepository
 {

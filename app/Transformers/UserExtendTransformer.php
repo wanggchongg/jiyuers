@@ -1,32 +1,24 @@
 <?php
 
-namespace Someline\Transformers;
+namespace App\Transformers;
 
-use League\Fractal\TransformerAbstract;
-use Someline\Models\UserExtend;
+use App\Models\User\UserExtend;
 
 /**
  * Class UserExtendTransformer
  * @package namespace Someline\Transformers;
  */
-class UserExtendTransformer extends TransformerAbstract
+class UserExtendTransformer extends BaseTransformer
 {
 
     /**
      * Transform the UserExtend entity
-     * @param Someline\Models\UserExtend $model
+     * @param \App\Models\User\UserExtend $model
      *
      * @return array
      */
     public function transform(UserExtend $model)
     {
-        return [
-            'id'         => (int) $model->id,
-
-            /* place your other model properties here */
-
-            'created_at' => $model->created_at,
-            'updated_at' => $model->updated_at
-        ];
+        return $model->toArray();
     }
 }
