@@ -63,4 +63,14 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     {
         $this->pushCriteria(app(RequestCriteria::class));
     }
+
+    /**
+     * @param $phoneNumber
+     * @return bool
+     */
+    public function isExistWithPhone($phoneNumber)
+    {
+        $data = $this->findWhere(['phone' => $phoneNumber]);
+        return empty($data['data']) ? false : true;
+    }
 }

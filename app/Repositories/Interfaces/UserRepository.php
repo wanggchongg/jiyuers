@@ -10,4 +10,5 @@ use App\Repositories\Interfaces\BaseRepositoryInterface;
  */
 interface UserRepository extends BaseRepositoryInterface
 {
+    public function isExistWithPhone($phoneNumber);
 }

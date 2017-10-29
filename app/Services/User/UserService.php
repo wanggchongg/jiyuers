@@ -23,16 +23,21 @@ class UserService extends BaseService
 
     public function registerByPhone($phoneNumber, $vCode, $password)
     {
-        
-        return true;
+        if () {
+            throw new \Exception("", 40002);
+        }
+        if ($this->userRepository->isExistWithPhone($phoneNumber)) {
+            throw new \Exception("", 40001);
+        }
+        $data = $this->userRepository->create([
+            'phone' => $phoneNumber,
+            'password' => password_hash($password, PASSWORD_DEFAULT),
+        ]);
+        return $data;
     }
 
     public function sendVerificationCode($phoneNumber)
     {
-
-
-
-
         return true;
     }
 
