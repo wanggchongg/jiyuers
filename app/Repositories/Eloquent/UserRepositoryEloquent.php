@@ -2,11 +2,10 @@
 
 namespace App\Repositories\Eloquent;
 
-use App\Models\Foundation\User;
-use App\Presenters\UserPresenter;
-use App\Repositories\Criteria\RequestCriteria;
 use App\Repositories\Interfaces\UserRepository;
+use App\Models\User\User;
 use App\Validators\UserValidator;
+use App\Presenters\UserPresenter;
 
 /**
  * Class UserRepositoryEloquent
@@ -25,24 +24,36 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     }
 
     /**
-    * Specify Validator class name
-    *
-    * @return mixed
-    */
+     * Specify Validator class name
+     *
+     * @return mixed
+     */
     public function validator()
     {
 
         return UserValidator::class;
     }
 
+
     /**
      * Specify Presenter class name
      *
-     * @return string
+     * @return mixed
      */
     public function presenter()
     {
         return UserPresenter::class;
+    }
+
+    /**
+     * @param $criteria
+     * @return $this
+     * @throws \Prettus\Repository\Exceptions\RepositoryException
+     */
+    public function pushCriteria($criteria)
+    {
+        parent::resetCriteria();
+        return parent::pushCriteria($criteria);
     }
 
     /**
@@ -51,15 +62,5 @@ class UserRepositoryEloquent extends BaseRepository implements UserRepository
     public function boot()
     {
         $this->pushCriteria(app(RequestCriteria::class));
-    }
-
-    /**
-     * @param array|Collection $userIds
-     * @return $this
-     */
-    public function byUserIds($userIds)
-    {
-        $this->model = $this->model->whereIn('user_id', $userIds);
-        return $this;
     }
 }

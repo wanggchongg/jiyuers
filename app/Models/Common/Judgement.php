@@ -6,7 +6,7 @@
  * Time: 0:20
  */
 
-namespace App\Models;
+namespace App\Models\Common;
 
 
 class Judgement

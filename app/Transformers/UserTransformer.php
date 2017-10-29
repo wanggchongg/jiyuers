@@ -2,7 +2,7 @@
 
 namespace App\Transformers;
 
-use App\Models\Foundation\User;
+use App\Models\User\User;
 
 /**
  * Class UserTransformer
@@ -10,24 +10,12 @@ use App\Models\Foundation\User;
  */
 class UserTransformer extends BaseTransformer
 {
-
     /**
-     * Transform the User entity
      * @param User $model
-     *
      * @return array
      */
     public function transform(User $model)
     {
-        return [
-            'user_id' => (int)$model->getUserId(),
-
-            /* place your other model properties here */
-            'name' => $model->name,
-            'email' => $model->email,
-
-            'created_at' => (string)$model->created_at,
-            'updated_at' => (string)$model->updated_at
-        ];
+        return $model->toArray();
     }
 }

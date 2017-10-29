@@ -244,12 +244,12 @@ if (!function_exists('generateJudgment')) {
      * @param int $code
      * @param string $message
      * @param null $data
-     * @return \App\Models\Judgement
+     * @return \App\Models\Common\Judgement
      */
     function generateJudgment($code = 0, $message = 'success', $data = null)
     {
         $code = intval($code);
         $message = empty($message) ? config('errors.'.$code) : $message;
-        return new \App\Models\Judgement($code, $message, $data);
+        return new \App\Models\Common\Judgement($code, $message, $data);
     }
 }
