@@ -3,6 +3,8 @@
 /storage/*.key
 /storage/clockwork.sqlite
 /vendor
+/public/dist
+/public/design
 Homestead.json
 Homestead.yaml
 .env
