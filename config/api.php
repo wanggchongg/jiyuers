@@ -169,7 +169,7 @@ return [
     */
 
     'auth' => [
-        'passport' => \Someline\Api\Auth\Provider\Passport::class,
+//        'passport' => \Someline\Api\Auth\Provider\Passport::class,
 //        'oauth' => \Someline\Api\Auth\Provider\OAuth2::class,
 //        'jwt' => Dingo\Api\Auth\Provider\JWT::class,
     ],

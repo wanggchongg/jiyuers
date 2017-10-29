@@ -1,8 +1,8 @@
 <?php
 
-namespace Someline\Presenters;
+namespace App\Presenters;
 
-use Someline\Transformers\UserExtendTransformer;
+use App\Transformers\UserExtendTransformer;
 use Prettus\Repository\Presenter\FractalPresenter;
 
 /**
