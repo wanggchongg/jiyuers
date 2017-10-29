@@ -23,7 +23,7 @@ class UserService extends BaseService
 
     public function registerByPhone($phoneNumber, $vCode, $password)
     {
-
+        
         return true;
     }
 
