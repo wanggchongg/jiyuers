@@ -3,7 +3,6 @@
 namespace App\Models\User;
 
 use App\Models\BaseModel as Model;
-use Jenssegers\Mongodb\Eloquent\HybridRelations;
 use Prettus\Repository\Contracts\Transformable;
 use Prettus\Repository\Traits\TransformableTrait;
 
@@ -14,7 +13,6 @@ use Prettus\Repository\Traits\TransformableTrait;
 class User extends Model implements Transformable
 {
     use TransformableTrait;
-    use HybridRelations;
 
     protected $connection = 'mysql';
 
@@ -25,9 +23,7 @@ class User extends Model implements Transformable
     protected $primaryKey = 'user_id';
     public $incrementing = true;
 
-    protected $fillable = [
-        'Ftitle',
-    ];
+    protected $fillable = [];
 //    protected $fillable = [
 //        'Farticle_id',
 //        'Ftitle',
