@@ -27,12 +27,7 @@ $api->version('v1', [
 
             // /users
             $api->group(['prefix' => 'users'], function (Router $api) {
-                $api->get('/', 'UsersSLController@index');
-                $api->post('/', 'UsersSLController@store');
-                $api->get('/me', 'UsersSLController@me');
-                $api->get('/{id}', 'UsersSLController@show');
-                $api->put('/{id}', 'UsersSLController@update');
-                $api->delete('/{id}', 'UsersSLController@destroy');
+                $api->get('/vcode', 'UsersController@sendVerificationCode');
             });
 
         });

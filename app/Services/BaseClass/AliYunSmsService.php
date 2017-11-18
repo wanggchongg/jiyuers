@@ -27,7 +27,6 @@ class AliYunSmsService extends BaseService
 
     /**
      * 取得AcsClient
-     *
      * @return DefaultAcsClient
      */
     public static function getAcsClient() {
@@ -37,11 +36,9 @@ class AliYunSmsService extends BaseService
         //产品域名,开发者无需替换
         $domain = "dysmsapi.aliyuncs.com";
 
-        // TODO 此处需要替换成开发者自己的AK (https://ak-console.aliyun.com/)
-        $accessKeyId = "yourAccessKeyId"; // AccessKeyId
-
-        $accessKeySecret = "yourAccessKeySecret"; // AccessKeySecret
-
+        //阿里云服务密码
+        $accessKeyId = env('ALIYUN_ACCESS_KEY_ID');
+        $accessKeySecret = env('ALIYUN_ACCESS_KEY_SECRET');
 
         // 暂时不支持多Region
         $region = "cn-hangzhou";
@@ -49,9 +46,7 @@ class AliYunSmsService extends BaseService
         // 服务结点
         $endPointName = "cn-hangzhou";
 
-
         if(static::$acsClient == null) {
-
             //初始化acsClient,暂不支持region化
             $profile = DefaultProfile::getProfile($region, $accessKeyId, $accessKeySecret);
 
@@ -118,7 +113,6 @@ class AliYunSmsService extends BaseService
         // var_dump($acsResponse);
 
         return $acsResponse;
-
     }
 
     /**
@@ -153,9 +147,6 @@ class AliYunSmsService extends BaseService
 
         // 发起访问请求
         $acsResponse = static::getAcsClient()->getAcsResponse($request);
-
-        // 打印请求结果
-        // var_dump($acsResponse);
 
         return $acsResponse;
     }

@@ -9,6 +9,7 @@
 namespace App\Services\User;
 
 
+use App\Services\BaseClass\AliYunSmsService;
 use App\Services\BaseService;
 use App\Repositories\Interfaces\UserRepository;
 
@@ -23,7 +24,7 @@ class UserService extends BaseService
 
     public function registerByPhone($phoneNumber, $vCode, $password)
     {
-        if () {
+        if (!$vCode) {
             throw new \Exception("", 40002);
         }
         if ($this->userRepository->isExistWithPhone($phoneNumber)) {
@@ -36,9 +37,33 @@ class UserService extends BaseService
         return $data;
     }
 
+    /**
+     * 发送随机验证码
+     * @param $phoneNumber
+     * @return \App\Services\BaseClass\stdClass
+     */
     public function sendVerificationCode($phoneNumber)
     {
-        return true;
+        $signName     = '数域';
+        $templateCode = 'SMS_106965097';
+        $params       = ['code' => $this->makeRandCode()];
+        $data = AliYunSmsService::sendSms($signName, $templateCode, $phoneNumber, $params);
+        return $data;
+    }
+
+    /**
+     * 随机数生成器
+     * @param int $length
+     * @return string
+     */
+    private function makeRandCode($length = 6)
+    {
+        $randCode = '';
+        $length = intval($length);
+        while ($length--) {
+            $randCode .= rand(0, 9);
+        }
+        return $randCode;
     }
 
 }
