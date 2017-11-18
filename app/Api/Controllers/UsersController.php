@@ -23,7 +23,11 @@ class UsersController extends BaseController
         $this->userService = $userService;
     }
 
-
+    /**
+     * 发送验证码
+     * @param SendVerificationCodeRequest $request
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function sendVerificationCode(SendVerificationCodeRequest $request)
     {
         $phoneNumber = $request->getPhoneNumber();

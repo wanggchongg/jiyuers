@@ -114,22 +114,22 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
-      <library name="PHP" type="php">
+      <library name="PHP">
         <CLASSES>
-          <root url="file://$MODULE_DIR$/../vendor/vendor_pools" />
+          <root url="file://E:/vendor/vendor_pools" />
         </CLASSES>
         <SOURCES>
-          <root url="file://$MODULE_DIR$/../vendor/vendor_pools" />
+          <root url="file://E:/vendor/vendor_pools" />
         </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library">
       <library name="PHARS">
         <CLASSES>
-          <root url="phar://$MODULE_DIR$/../vendor/vendor_pools/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+          <root url="phar://E:/vendor/vendor_pools/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
         </CLASSES>
         <SOURCES>
-          <root url="phar://$MODULE_DIR$/../vendor/vendor_pools/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
+          <root url="phar://E:/vendor/vendor_pools/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-1.0.0.phar/" />
         </SOURCES>
       </library>
     </orderEntry>
