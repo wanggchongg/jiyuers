@@ -19,7 +19,8 @@
     "prettus/l5-repository": "~2.6",
     "predis/predis": "^1.1",
     "intervention/image": "~2.",
-    "wanggchongg/aliyun-dysms-php-sdk":"dev-master"
+    "wanggchongg/aliyun-dysms-php-sdk":"dev-master",
+    "jenssegers/mongodb": "dev-master"
   },
   "require-dev": {
     "codeception/codeception": "^2.3",
@@ -53,6 +54,10 @@
     "wanggchongg/aliyun-dysms-php-sdk": {
       "type": "git",
       "url": "https://github.com/wanggchongg/aliyun-dysms-php-sdk.git"
+    },
+    "jenssegers/mongodb": {
+      "type" : "git",
+      "url" : "https://github.com/Tucker-Eric/laravel-mongodb.git"
     }
   },
   "scripts": {
