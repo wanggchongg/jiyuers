@@ -47,6 +47,9 @@ class AliYunSmsService extends BaseService
         $endPointName = "cn-hangzhou";
 
         if(static::$acsClient == null) {
+            //加载region配置项
+            Config::load();
+
             //初始化acsClient,暂不支持region化
             $profile = DefaultProfile::getProfile($region, $accessKeyId, $accessKeySecret);
 
